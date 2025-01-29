@@ -16,9 +16,35 @@ var thousand = new Intl.NumberFormat('en-US')
 var money = new Intl.NumberFormat('en-US', {
   style: 'currency',
   currency: 'USD',
+  minimumFractionDigits: 0,
+  maximumFractionDigits: 0,
 });
+var additional_instructions_shown = false;
 
-//todo: also work for 400 richest
+function detect_confused_user(e, timer) {
+  if (!additional_instructions_shown) {
+    additional_instructions_shown = true;
+
+    setTimeout(function(){
+      if (window.scrollX < 1) {
+        document.getElementById('instructions').classList.add("show");
+      }
+    }, timer);
+  }
+}
+function detect_slightly_confused_user(e, timer) {
+  detect_confused_user(e, 2000);
+}
+function detect_very_confused_user(e, timer) {
+  detect_confused_user(e, 4500);
+}
+
+if (window.innerWidth > 450) {
+  document.addEventListener("mousemove", detect_very_confused_user, {once: true});
+  document.addEventListener("mousewheel", detect_slightly_confused_user, {once: true});
+  document.addEventListener("DOMMouseScroll", detect_slightly_confused_user, {once: true});
+}
+
 window.addEventListener('scroll', function(){
   update_wealth_counter();
 });
@@ -48,12 +74,11 @@ babies.addEventListener('scroll', function(){
   baby_counter.innerHTML = thousand.format(Math.floor(babies.scrollTop / bg_size * 5));
 })
 
-//Todo: stop executing once scrolled past
 function update_wealth_counter() {
   if (bezos_viewable()) {
     if (bezos_counter_viewable()) {
       let wealth = (window.scrollX - bezos.offsetLeft + 175) * 500000;
-      bezos_counter.innerHTML = (wealth < 139000000000) ? money.format(wealth) : "$139,000,000,000.00";
+      bezos_counter.innerHTML = (wealth < 185000000000) ? money.format(wealth) : "$185,000,000,000";
     }
     else {
       bezos_counter.innerHTML = '';
@@ -62,10 +87,10 @@ function update_wealth_counter() {
   else if (four_hundred_viewable()) {
     if (four_hundred_counter_viewable()) {
       let wealth = (window.scrollX - four_hundred.offsetLeft + 175) * 500000;
-      four_hundred_counter.innerHTML = (wealth < 2960000000000) ? money.format(wealth) : "$2,960,000,000,000.00";
+      four_hundred_counter.innerHTML = (wealth < 3200000000000) ? money.format(wealth) : "$3,200,000,000,000";
     }
     else {
-      bezos_counter.innerHTML = '';
+      four_hundred_counter.innerHTML = '';
     }
   }
   function bezos_viewable() {
@@ -84,3 +109,5 @@ function update_wealth_counter() {
 function toggleZoom() {
   document.getElementById('line-chart').classList.toggle('zoom');
 }
+
+

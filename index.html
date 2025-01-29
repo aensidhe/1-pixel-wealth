@@ -15,7 +15,7 @@
   <meta property="og:description" content="Неравенство в США вышло из-под контроля. И мы придумали необычный способ это визуализировать." />
   <meta property="og:image" content="https://aensidhe.ru/1-pixel-wealth/img/off-the-chart.png" />
 
-  <link rel="stylesheet" type="text/css" href="main.css?version=1.0">
+  <link rel="stylesheet" type="text/css" href="main.css?version=1.10">
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
 
   <!-- Yandex.Metrika counter -->
@@ -36,16 +36,19 @@
 <body>
 
   <div class="wealth-wrapper-outer">
-    <div class=wealth-row wealth-row-one>
+    <div class="wealth-row wealth-row-one">
       <div class="title-screen">
         <h1 alt="Wealth shown to scale">Богатство в масштабе</h1>
         <div class="translators">Переводчик: <a href="" target="_blank">Анатолий ИнШи Попов</a></div>
         <div class="translators">Редактор: <a href="https://github.com/AnastasiaPetrovna" target="_blank">AnastasiaPetrovna</a></div>
         <div class="translators"><a href="https://mkorostoff.github.io/1-pixel-wealth/" target="_blank">Оригинал</a></div>
-        <div class="scroll-this-way" title="scroll">Скролльте</div>
+        <div class="scroll-this-way">
+          <span>Скролльте</span>
+          <div id="instructions" class="instructions">Для скролла вправо, используйте колесо с зажатой клавишей Shift. Если у вас тачпад, свайпайте в сторону.</div>
+        </div>
       </div>
       <div class="wealth-wrapper">
-        <h2 class="wealth-title" title="$1,000">1000 долларов</h2>
+        <h2 class="wealth-title">1000 долларов</h2>
         <div class="wealth one-thousand"></div>
         <div class="arrow">
           <svg viewBox="668 -8 14 70" width="14" height="70">
@@ -55,100 +58,99 @@
       </div>
 
       <div class="wealth-wrapper median">
-        <h2 class="wealth-title" title="$63,179 (Median US household income)">63179 долларов (медианный семейный доход)</h2>
-        <div class="wealth"></div>
+        <h2 class="wealth-title">$68000 <span class="explainer">(медианный семейный доход)</span></h2>
+        <div class="wealth median-income"></div>
       </div>
 
       <div class="wealth-wrapper million">
-        <h2 class="wealth-title" title="$1 million">1 млн долларов</h2>
+        <h2 class="wealth-title">1 млн долларов</h2>
         <div class="wealth"></div>
       </div>
 
-
       <div class="wealth-wrapper billion">
         <div class="wealth">
-          <h2 class="wealth-title" title="$1 billion">1 млрд долларов</h2>
+          <h2 class="wealth-title">1 млрд долларов</h2>
         </div>
       </div>
 
       <div name="bezos" class="wealth-wrapper bezos">
         <div id="bezos" class="wealth ruler">
-          <h2 class="wealth-title" title="$139 billion (wealth of Jeff Bezos)">139 млрд долларов<br>(состояние Джеффа Безоса)</h2>
+          <h2 class="wealth-title">$185 млрд долларов<br>(состояние Джеффа Безоса)</h2>
           <div class="counter" id="bezos-counter"></div>
-          <div class="key" title="$80 million">
+          <div class="key">
             <span>80 млн долларов</span>
           </div>
 
           <div class="text-infobox infobox first">
-            <div class="title" title="Jeff is so wealthy, that it is quite literally unimaginable.">Джефф настолько богат, что это практически невозможно представить.</div>
+            <div class="title">Джефф настолько богат, что это практически невозможно представить.</div>
           </div>
 
           <div class="text-infobox infobox">
-            <div class="title" title="We rarely see wealth inequality represented to scale. This is part of the reason Americans consistently under-estimate the relative wealth of the super rich.">Мы редко наблюдаем неравенство дохода в масштабе. Отчасти поэтому американцы <a href="https://www.ncbi.nlm.nih.gov/pubmed/26162108" target="_blank">регулярно недооценивают</a> относительное благосостояние сверхбогатых людей.</div>
+            <div class="title">Мы редко наблюдаем неравенство дохода в масштабе. Отчасти поэтому американцы <a href="https://www.ncbi.nlm.nih.gov/pubmed/26162108" target="_blank">регулярно недооценивают</a> относительное благосостояние сверхбогатых людей.</div>
           </div>
 
           <div class="five-pixels text-infobox infobox-half infobox">
-            <div class="title" title="Every 10 pixels you scroll is $5 million.">Каждые 10 пикселей, которые вы проскроллили, представляют 5 млн долларов.</div>
+            <div class="title">Каждые 10 пикселей, которые вы проскроллили, представляют 5 млн долларов.</div>
           </div>
 
           <div class="coming-up text-infobox infobox">
-            <div class="title" title="OK, we're coming up on the end now.">OK, мы почти закончили.</div>
+            <div class="title">OK, мы почти закончили.</div>
           </div>
 
           <div class="text-infobox infobox">
-            <div id="bezos-counter-start" class="title" title="Lol, just kidding, we're about &#8531; of the way. Keep scrolling though, there's more to see.">
-              <p>Ха-ха, шучу, мы примерно на &#8531; пути. Тем не менее, продолжайте скроллить, там есть что посмотреть.</p>
+            <div id="bezos-counter-start" class="title">
+              <p>Ха-ха, шучу, мы примерно на трети пути. Тем не менее, продолжайте скроллить, там есть что посмотреть.</p>
             </div>
           </div>
 
 
-          <div class="text-infobox infobox infobox-half" title="Let's put this wealth in perspective by comparing it to some familiar things.">
+          <div class="text-infobox infobox infobox-half">
             <div class="title">Давайте сравним это состояние с какими-нибудь знакомыми вещами и понятиями.</div>
           </div>
 
-          <div class="infobox infobox-half lifetime" title="All the money you will ever earn in your entire life from the day you are born until the day you die (about $1.7 million)">
+          <div class="infobox infobox-half lifetime">
             <div class="title-square-wrapper">
               <div class="title">Все деньги, которые вы заработаете за всю свою жизнь (порядка 1.7 млн долларов).</div>
               <div class="square"></div>
             </div>
           </div>
 
-          <div class="infobox infobox-half healthcare" title="Annual cost of health care for a family of four">
+          <div class="infobox infobox-half healthcare">
             <div class="title-square-wrapper">
-              <div class="title">Годовая стоимость семейной медицинской страховки на четырёх человек [на 2020й в США нет системы ОМС или бесплатной медицины, <a href="https://en.wikipedia.org/w/index.php?title=Health_insurance_coverage_in_the_United_States&oldid=953982628" target="_blank">30 млн человек не застрахованы</a>, <em>прим. пер.</em>].</div>
+              <div class="title">Годовая стоимость семейной медицинской страховки на четырёх человек [на 2022й в США нет системы ОМС или бесплатной медицины, <a href="https://en.wikipedia.org/w/index.php?title=Health_insurance_coverage_in_the_United_States&oldid=953982628" target="_blank">27 млн человек не застрахованы</a>, <em>прим. пер.</em>].</div>
               <div class="square"></div>
             </div>
           </div>
 
-          <div class="infobox infobox-half amazon-year" title="Annual pay of amazon warehouse worker.">
+          <div class="infobox infobox-half amazon-year">
             <div class="title-square-wrapper">
               <div class="title">Годовая зарплата складского рабочего в Amazon.</div>
               <div class="square"></div>
             </div>
           </div>
 
-          <div class="infobox infobox-half year-veteran" title="Annual cost to house every single homeless veteran.">
+          <div class="infobox infobox-half year-veteran">
             <div class="square shadow">
               <div class="title">Годовая стоимость жилья для всех до единого одиноких бездомных ветеранов.</div>
             </div>
           </div>
 
-          <div class="infobox infobox-half year-chemo" title="Annual cost of chemotherapy for all cancer patients ($9 billion)">
+          <div class="infobox infobox-half year-chemo">
             <div class="square shadow">
               <div class="title">Годовая стоимость химиотерапии для всех больных раком (9 млрд долларов)</div>
-              <div class="midtext-wrapper" title="In 2018, Jeff Bezos made $9 billion in about 40 days.">
-                <div class="midtext">В 2018 Джефф Безос разбогател на 9 млрд долларов за 40 дней.</div>
+              <div class="midtext-wrapper">
+                <div class="midtext">20 июня 2020го года Джефф Безос разбогател на <a href="https://www.cnbc.com/2020/07/21/bezos-record-multibillion-dollar-net-worth-gain-bloomberg.html" target="_blank">13 млрд долларов</a> за день.</div>
               </div>
             </div>
           </div>
 
-          <div class="infobox infobox-half text-infobox" title="Even the fortunes of very rich people are dwarfed by the incomprehensible wealth of the 0.0001%.">
+          <div class="infobox infobox-half text-infobox">
             <div class="title">
               <p>Непостижимое богатство 0.0001% населения затмевает полностью состояния даже очень богатых людей.</p>
             </div>
           </div>
 
-          <div class="infobox infobox-quarter celebrities" title="Wealth of Goldman Sachs CEO David Solomon ($50 million)">
+          <div class="infobox infobox-quarter celebrities">
             <div class="column-infobox">
               <div class="sub-infobox goldman">
                 <div class="title">Состояние Дэвида Соломона, CEO Goldman Sachs (50 млн долларов)</div>
@@ -156,42 +158,42 @@
               </div>
 
             </div>
-            <div class="sub-infobox beyonce" title="Wealth of Beyonc&eacute; ($400 million)">
+            <div class="sub-infobox beyonce">
               <div class="title">Состояние Бейонс (400 млн долларов)</div>
               <div class="square shadow"></div>
             </div>
 
-            <div class="sub-infobox tim-cook" title="Wealth of Apple CEO Tim Cook ($625 million)">
+            <div class="sub-infobox tim-cook">
               <div class="title">Состояние Тима Кука, CEO Apple (625 млн долларов)</div>
               <div class="square shadow"></div>
             </div>
 
             <div class="column-infobox">
-              <div class="sub-infobox doctor small" title="Lifetime earnings of a doctor, on average ($6.7 million)">
+              <div class="sub-infobox doctor small">
                 <div class="title">Заработок врача за всю жизнь, в среднем (6.7 млн долларов)</div>
                 <div class="square shadow"></div>
               </div>
 
-              <div class="sub-infobox lawyer small" title="Lifetime earnings of a lawyer, on average ($4 million)">
+              <div class="sub-infobox lawyer small">
                 <div class="title">Заработок юриста за всю жизнь, в среднем (4 млн долларов)</div>
                 <div class="square shadow"></div>
               </div>
             </div>
 
-            <div class="sub-infobox hedgefund" title="Lifetime earnings of a hedge fund manager, on average ($84 million)">
-              <div class="title">Заработок менеджера хедж-фонда за всю жизнь, в среднем (84 млн долларов)</div>
+            <div class="sub-infobox hedgefund">
+              <div class="title">Заработок управляющего хедж-фондом за всю жизнь, в среднем (84 млн долларов)</div>
               <div class="square shadow"></div>
             </div>
 
           </div>
 
-          <div class="infobox infobox-close text-infobox" title="These people may see themselves as fabulously rich, and often oppose policies aimed at reducing inequality.">
+          <div class="infobox infobox-close text-infobox">
             <div class="title">
               <p>Эти люди могут считать себя сказочно богатыми и часто выступают против политики, направленной на уменьшение неравенства.</p>
             </div>
           </div>
 
-          <div class="infobox infobox-close text-infobox" title="But many have not fully grasped the enormous gulf between themselves and the super rich.">
+          <div class="infobox infobox-close text-infobox">
             <div class="title">
               <p>Но многие не до конца осознают гигансткую пропасть между ними и сверхбогатыми.</p>
             </div>
@@ -200,7 +202,7 @@
           <div id="line-chart" class="infobox infobox-quarter line-chart">
             <div class="chart-outer">
               <div class="chart-inner">
-                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xl="http://www.w3.org/1999/xlink" version="1.1" xmlns:dc="http://purl.org/dc/elements/1.1/" viewBox="150 276 696 152" width="100%" height="100%">
+                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xl="http://www.w3.org/1999/xlink" xmlns:dc="http://purl.org/dc/elements/1.1/" version="1.1" viewBox="150 276 604 133" width="604" height="133">
                     <defs>
                       <font-face font-family="Arial" font-size="16" panose-1="2 11 6 4 2 2 2 2 2 4" units-per-em="1000" underline-position="-105.95703" underline-thickness="73.24219" slope="0" x-height="518.5547" cap-height="716.3086" ascent="905.2734" descent="-211.91406" font-weight="400">
                         <font-face-src>
@@ -212,64 +214,61 @@
                           <font-face-name name="ArialMT"/>
                         </font-face-src>
                       </font-face>
-                      <font-face font-family="Arial" font-size="16" panose-1="2 11 6 4 2 2 2 9 2 4" units-per-em="1000" underline-position="-105.95703" underline-thickness="73.24219" slope="-750" x-height="518.5547" cap-height="715.8203" ascent="905.2734" descent="-211.91406" font-style="italic" font-weight="400">
-                        <font-face-src>
-                          <font-face-name name="Arial-ItalicMT"/>
-                        </font-face-src>
-                      </font-face>
+                      <marker orient="auto" overflow="visible" markerUnits="strokeWidth" id="FilledArrow_Marker" stroke-linejoin="miter" stroke-miterlimit="10" viewBox="-1 -4 10 8" markerWidth="10" markerHeight="8" color="black">
+                        <g>
+                          <path d="M 8 0 L 0 -3 L 0 3 Z" fill="currentColor" stroke="currentColor" stroke-width="1"/>
+                        </g>
+                      </marker>
                     </defs>
-                    <metadata>
-                      <dc:date></dc:date>
-                    </metadata>
-                    <g id="Canvas_1" stroke-opacity="1" fill="none" fill-opacity="1" stroke-dasharray="none" stroke="none">
+                    <metadata> Produced by OmniGraffle 7.19.2\n2021-12-02 15:16:55 +0000</metadata>
+                    <g id="Canvas_1" stroke-dasharray="none" fill="none" fill-opacity="1" stroke="none" stroke-opacity="1">
                       <title>Canvas 1</title>
-                      <g id="Canvas_1: Layer 1">
+                      <g id="Canvas_1_Layer_1">
                         <title>Layer 1</title>
                         <g id="Graphic_3">
-                          <text class="desktop-zuck" transform="translate(715.2031 353.7383)" fill="black">
-                            <tspan font-family="Arial" font-size="16" font-weight="400" fill="black" x="2.2226562" y="14" title="Mark Zuckerberg ">Марк Цукерберг </tspan>
-                            <tspan class="zuck-wealth" font-family="Arial" font-size="12" font-weight="400" fill="black" x="26.663086" y="28.523438" title="($82 billion)">(82 млрд долларов)</tspan>
-                          </text>
-                          <text class="mobile-zuck" transform="translate(668 353.7383)" fill="black">
-                            <tspan class="zuck-name" font-family="Arial" font-size="16" font-weight="400" fill="black" x="55.36719" y="14"alt="Mark ">Марк </tspan>
-                            <tspan class="zuck-name" font-family="Arial" font-size="16" font-weight="400" fill="black" x="12" y="41.523438" title="Zuckerberg ">Цукерберг </tspan>
-                            <tspan class="zuck-wealth" font-family="Arial" font-size="12" font-weight="400" fill="black" x="21.880859" y="67.046875" title="($82 billion)">(82 млрд долларов)</tspan>
+                          <text transform="translate(668 353.7383)" fill="black">
+                            <tspan font-family="Arial" font-size="16" font-weight="400" fill="black" x="45.36719" y="14">Марк </tspan>
+                            <tspan font-family="Arial" font-size="16" font-weight="400" fill="black" x="0" y="31.523438">Цукерберг </tspan>
+                            <tspan font-family="Arial" font-size="12" font-weight="400" fill="black" x="13.105469" y="46.046875">($116 млрд долларов)</tspan>
                           </text>
                         </g>
                         <g id="Graphic_5">
-                          <text class="zero-outer" transform="translate(173 353.7383)" fill="black">
-                            <tspan class="zero" font-family="Arial" font-size="16" font-weight="400" fill="black" x="0" y="14" title="$0">0</tspan>
+                          <text transform="translate(173 353.7383)" fill="black">
+                            <tspan font-family="Arial" font-size="16" font-weight="400" fill="black" x="0" y="14">$0</tspan>
                           </text>
                         </g>
                         <g id="Graphic_9">
                           <text transform="translate(155 281.5)" fill="black">
-                            <tspan class="two-hundred-million" font-family="Arial" font-size="16" font-weight="400" fill="black" x="0" y="14" title="$200 million">200 млн долларов</tspan>
+                            <tspan font-family="Arial" font-size="16" font-weight="400" fill="black" x="0" y="14">200 миллионов долларов</tspan>
                           </text>
                         </g>
                         <g id="Line_10">
-                          <line x1="197.73068" y1="304.02344" x2="197.8919" y2="360.51144" stroke="black" stroke-linecap="square" stroke-linejoin="round" stroke-width=".25"/>
+                          <line x1="197.54418" y1="304.02344" x2="197.09944" y2="345.59456" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="square" stroke-linejoin="round" stroke-width="1"/>
                         </g>
                         <g id="Line_2">
                           <line x1="203" y1="362" x2="703" y2="362" stroke="black" stroke-linecap="square" stroke-linejoin="round" stroke-width="13"/>
+                        </g>
+                        <g id="Graphic_11">
+                          <rect x="196.49399" y="355.494" width=".86" height="13" fill="#68bc36"/>
                         </g>
                       </g>
                     </g>
                   </svg>
                 </div>
                 <div id="ok-zoomer">
-                  <a class="zoom-in" onclick="toggleZoom()" href="javascript:;" title="Zoom In">Увеличить</a>
-                  <a class="zoom-out" onclick="toggleZoom()" href="javascript:;" title="Zoom Out">Уменьшить</a>
+                  <a class="zoom-in" onclick="toggleZoom()" href="javascript:;">Увеличить</a>
+                  <a class="zoom-out" onclick="toggleZoom()" href="javascript:;">Уменьшить</a>
                 </div>
               </div>
             </div>
 
-            <div class="infobox infobox-close text-infobox" title="We can have a world in which wealthy people exist, without handing nearly all money to the super rich.">
+            <div class="infobox infobox-close text-infobox">
               <div class="title">
                 <p>Мы можем жить в мире, в котором есть место богатым людям, но в руки сверхбогатых людей не <a href="https://www.usatoday.com/story/money/2018/01/22/vast-majority-new-wealth-last-year-went-top-1/1051947001/" target="_blank">отданы почти все деньги</a>.</p>
                 </div>
               </div>
 
-        <div class="infobox infobox text-infobox no-single-human" title="No single human needs or deserves this much wealth.">
+        <div class="infobox infobox text-infobox no-single-human">
           <div class="title">
             <p>Ни один человек на планете не нуждается и не заслуживает такого богатства.</p>
           </div>
@@ -279,20 +278,20 @@
     </div>
 
     <div id="four-hundred" class="wealth-wrapper four-hundred">
-      <div class="wealth ruler" title="400 richest Americans ($2.96 trillion)">
-        <h2 class="wealth-title"></h2>
-        <div class="counter" id="four-hundred-counter">400 богатейших американцев (2.96 трлн долларов)</div>
-        <div class="key" title="$80 million">
+      <div class="wealth ruler">
+        <h2 class="wealth-title">400 богатейших американцев (3.2 трлн долларов)</h2>
+        <div class="counter" id="four-hundred-counter"></div>
+        <div class="key">
           <span>80 млн долларов</span>
         </div>
 
-        <div class="infobox infobox text-infobox intro" title="Jeff Bezos may be insanely rich, but it is a drop in the ocean compared to the combined wealth of his peers. The 400 richest Americans own about $3 trillion, which is more than the bottom 60% percent of Americans.">
+        <div class="infobox infobox text-infobox intro">
           <div class="title">
-            Джефф Безос, может, и безумно богат, но это лишь капля в море по сравнению с объединённым богатством его коллег. 400 богатейших американцев владеют примерно тремя трлнми долларов, что больше, чем общее состояние наименее обеспеченных 60% американцев.
+            Джефф Безос, может, и безумно богат, но это лишь капля в море по сравнению с объединённым богатством его коллег. 400 богатейших американцев владеют 3.2 триллионами долларов, что больше, чем общее состояние наименее обеспеченных 60% американцев.
           </div>
         </div>
 
-        <div id="four-hundred-counter-start" class="people-wrapper-outer four-hundred-people infobox infobox-close" title="400 people">
+        <div id="four-hundred-counter-start" class="people-wrapper-outer four-hundred-people infobox infobox-close">
           <div class="people-wrapper center-sticky">
             <div class="people">
               <div class="people-label bubble">400 человек</div>
@@ -300,21 +299,25 @@
           </div>
         </div>
 
-        <div class="people-wrapper-outer sixty-percent-people infobox infobox-close" title="Bottom 60% (Scroll Down)">
+        <div class="people-wrapper-outer sixty-percent-people infobox infobox-close">
           <div id="sixty-percent" class="people-wrapper center-sticky">
             <div class="people-label bubble">Наименее обеспеченные 60% (скрольте вниз)</div>
             <div id="sixty-percent-indicator" class="percent">0.0%</div>
           </div>
         </div>
 
-        <div class="infobox infobox text-infobox intro" title="A trillion dollars is such a large figure, that you might as well say 'eleventy gajillion zillion dollars.'  So in this section, we will try to understand the scale of this figure by looking at what could be accomplished with various chunks of this wealth.">
+        <div class="infobox infobox text-infobox intro">
           <div class="title">
-            <p>Триллион долларов - это настолько много, что с тем же успехом можно сказать "стопицот долларов". Так что в этом разделе мы попробуем понять масштаб этой суммы. Для этого мы посмотрим, чего можно достичь, потратив ту или иную её часть.</p>
+            <p>Триллион долларов - это так много, что с тем же успехом можно сказать "стопицот долларов". Так что в этом разделе мы попробуем понять масштаб этой суммы. Для этого мы посмотрим, чего можно достичь, потратив ту или иную её часть.</p>
+          </div>
+        </div>
+        <div class="infobox text-infobox infobox-close">
+          <div class="title">
+            Некоторые начнут убеждать вас, что использование этих денег для общественного блага просто невозможно, поскольку оно существует только в виде акций или других активов, а, следовательно, недоступно. <a href="https://github.com/MKorostoff/1-pixel-wealth/blob/master/THE_PAPER_BILLIONAIRE.md" target="_blank">Это просто неправда</a>.
           </div>
         </div>
 
-
-        <div class="infobox text-infobox infobox-close" title="As we proceed, try to keep in mind: all of this wealth is controlled by a group so small, that they could fit on a single 747 airplane&#8212;with 260 seats left over.">
+        <div class="infobox text-infobox infobox-close">
           <div class="title">
             <p>По ходу анализа постарайтесь не забывать: всё это богатство находится в руках людей, которые спокойно уместятся в одном Boeing 747&#8212;, и ещё 260 мест останется.</p>
           </div>
@@ -328,26 +331,38 @@
           </div>
         </div>
 
-        <div class="infobox text-infobox infobox-half" title="What could we do with 3% of this money?">
-          <h2 class="title what-could-we-do">Что мы можем сделать с 3% этих денег?</h2>
+        <div class="infobox text-infobox infobox-half">
+          <h2 class="title what-could-we-do">Что мы можем сделать с меньше, чем десятью процентов этих денег?</h2>
         </div>
 
         <div class="infobox infobox-quarter flex">
-          <div class="piechart three-percent">
+          <div class="piechart six-percent">
             <svg class="piechart-outer" viewBox="0 0 32 32">
               <circle class="piechart-inner" r="16" cx="16" cy="16" />
             </svg>
-            <span class="label">3%</span>
+            <span class="label">6%</span>
             <div class="dotted-line"></div>
-            <div class="description" title="Test Every American for Coronavirus">
-              <h2>Протестировать каждого американца на коронавирус (COVID-19)</h2>
+            <div class="description">
+              <h2>Вакцинировать каждого человека на планете от коронавируса</h2>
             </div>
           </div>
         </div>
 
         <div class="infobox text-infobox infobox-close">
-          <div class="title" title="As of this writing, testing in the United States falls far short of what is needed to re-open the economy. By some estimates, sufficiently ramping up testing to around 30 million tests per week would cost around $100 billion total, or about 3% of the wealth currently controlled by the 400 richest Americans.">
-            <p>На момент написания этого текста, тестирование в США абсолютно недостаточно для отмены карантина. По некоторым оценкам, наращивание тестирования до 30 млн тестов в неделю будет стоить <a href="https://www.cnbc.com/2020/04/21/coronavirus-tests-rockefeller-plan-would-screen-millions-for-covid-19.html" target="_blank">около ста миллардов долларов</a> или 3% состояния 400 богатейших американцев.</p>
+          <div class="title">
+            <p>Учитывая <a href="https://www.washingtonpost.com/world/eu-coronavirus-vaccines-cheaper-than-united-states/2020/12/18/06677e34-4139-11eb-b58b-1623f6267960_story.html">стоимость вакцин</a> и <a href="https://www.who.int/docs/default-source/coronaviruse/act-accelerator/covax/costs-of-covid-19-vaccine-delivery-in-92amc_08.02.21.pdf" target="_blank">стоимость доставки</a>, потребуется около <a href="https://github.com/MKorostoff/1-pixel-wealth/blob/master/docs/COST_OF_VACCINATION.md" target="_blank">двухсот миллиардов долларов</a>, чтобы вакцинировать всех людей на планете, или около 6% богатства 400 самых богатых американцев. После этого данные индивиды будут всё ещё на 40 миллардов долларов богаче, чем они были до пандемии.</p>
+          </div>
+        </div>
+
+        <div class="infobox text-infobox infobox-close">
+          <div class="title">
+            <p>Даже если не учитывать гуманитарную сторону дела, богатые страны должны сделать это в своих интересах: чем дольше ковид на планете, тем больше шансов на появление <a href="https://www.newscientist.com/article/mg24933201-800-vaccine-nationalism-will-leave-everyone-more-at-risk-of-coronavirus/" target="_blank">вакцинорезистентного штамма</a>, что сведёт на нет успехи всех уже завершённых программ вакцинации.</p>
+          </div>
+        </div>
+
+        <div class="infobox text-infobox infobox-close">
+          <div class="title">
+            <p>ВОЗ пытается организовать программу по вакцинации <a href="https://www.who.int/initiatives/act-accelerator/covax" target="_blank">20%</a> жителей бедных стран к концу 2021го и даже на это <a href="https://www.washingtonpost.com/world/2021/04/01/covax-healthcare-workers-funding/" target="_blank">не выделяют денег</a>.</p>
           </div>
         </div>
 
@@ -358,45 +373,39 @@
             </svg>
             <span class="label">3%</span>
             <div class="dotted-line"></div>
-            <div class="description" title="Permanently Eradicate Malaria">
+            <div class="description">
               <h2>Полностью уничтожить малярию</h2>
             </div>
           </div>
         </div>
 
-        <div class="infobox text-infobox infobox-close" title="Malaria is one of the worst infectious diseases ever visited on mankind, possibly killing more people than any other infectious disease in history. In the 20th century alone, malaria killed more people than the Black Death. Coronavirus has shown us all the horrors of living with a deadly disease. Sadly, for much of the world, this horror was a constant feature of daily life even before coronavirus.">
+        <div class="infobox text-infobox infobox-close">
           <div class="title">
             <p>Малярия - одно из худших инфекционных заболеваний, возможно убившее больше людей, чем любое другое заболевание в истории человечества. Только в 20 веке малярия убила больше людей, чем <a href="https://ru.wikipedia.org/wiki/Чёрная_смерть" target="_blank">Чёрная смерть</a></p>
-            <p>Коронавирус показал нам всем ужасы жизни по соседству со смертельным заболеванием. К сожалению, во многих местах подобный ужас - обыденность, и был ею до коронавируса.</p>
           </div>
         </div>
 
         <div class="infobox infobox-quarter">
           <div class="infectious">
-            <div class="corona-bar" title="COVID-19 deaths January to April 2020 (About 200,000).">
+            <div class="malaria-bar">
               <div class="square shadow">
-                <div class="title">Смертей от COVID-19 с января по апрель 2020<br> (около 200 тысяч).</div>
+                <div class="title">Ежегодно от малярии умирает <br> (409 тысяч).</div>
               </div>
             </div>
-            <div class="malaria-bar" title="Malaria deaths January to April 2020 (about 135,000).">
-              <div class="square shadow">
-                <div class="title">Смертей от малярии с января по апрель 2020<br> (около 135 тысяч).</div>
-              </div>
-            </div>
-            <div class="ebola-bar" title="Ebola deaths in all of human history combined (about 15,000)">
+            <div class="ebola-bar">
               <div class="title">Смертей от эболы за <strong>всю историю человечества</strong> (около 15 тысяч).</div>
               <div class="square shadow"></div>
             </div>
           </div>
         </div>
 
-        <div class="infobox text-infobox infobox-close" title="These figures are even more shocking when you learn that malaria overwhelmingly kills children; around two-thirds of malaria deaths each year are children under five. That's around 285,000 children.">
+        <div class="infobox text-infobox infobox-close">
           <div class="title">
-            Эти данные шокируют ещё больше, когда узнаёшь, что малярия убивает в основном детей. Две трети умерших каждый год - дети младше пяти лет. Это примерно 285 тысяч детей.
+            Эти данные шокируют ещё больше, когда узнаёшь, что малярия убивает в основном детей. Две трети умерших каждый год - дети младше пяти лет. Это примерно 275 тысяч детей.
           </div>
         </div>
 
-        <div class="infobox infobox-close malaria flex" title="Children under five killed by malaria each year (Scroll Down)">
+        <div class="infobox infobox-close malaria flex">
           <div id="babies-wrapper" class="babies-wrapper center-sticky">
             <div id="babies" class="babies">
               <div class="scroll-indicator bubble">Дети младше пяти лет умершие от малярии, ежегодно <div class="people-sub-label">(Проскрольте вниз)</div></div>
@@ -407,64 +416,61 @@
 
         <div class="infobox text-infobox infobox-close">
           <div class="title">
-            <p title="All of these deaths are preventable. Treating and preventing malaria is a well understood science, universally practiced in the developed world."><em>Всех</em> этих смертей можно избежать. Во всём развитом мире есть давно разработанные и внедрённые методики по профилактике и лечению малярии.</p>
-            <p title="It is estimated</a> that malaria could be globally eradicated by 2030 for a cost around $1.84 per at-risk person per year, or around $100 billion total. This would be around 3% of the wealth currently possessed by the 400 richest Americans."><a href="https://www.ncbi.nlm.nih.gov/pubmed/25551454" target="_blank">Подсчитано,</a> что малярия может быть ликвидирована к 2030 году. Для этого надо потратить около 1.84 доллара на человека в группе риска в год, или около 100 млрд долларов. Это составит примерно 3% средств, находящихся на текущий момент в руках 400 богатейших американцев.</p>
+            <p><em>Всех</em> этих смертей можно избежать. Во всём развитом мире есть давно разработанные и внедрённые методики по профилактике и лечению малярии.</p>
+            <p><a href="https://www.ncbi.nlm.nih.gov/pubmed/25551454" target="_blank">Подсчитано,</a> что малярия может быть ликвидирована к 2030 году. Для этого надо потратить около 1.84 доллара на человека в группе риска в год, или около 100 млрд долларов. Это составит примерно 3% средств, находящихся на текущий момент в руках 400 богатейших американцев.</p>
           </div>
         </div>
 
-        <div class="infobox text-infobox infobox-close" title="Around 800 children will die of malaria today. A small group of super rich people could stop it for a sum of money so small that they would likely never even notice its absence. But they choose not to.">
+        <div class="infobox text-infobox infobox-close">
           <div class="title">
             <p>Около 800 детей умрёт от малярии сегодня. Небольшая группа сверхбогатых людей могла бы предотвратить это, потратив сумму денег настолько малую, что они скорее всего не заметят её отсутствия. Но они решили не делать этого.</p>
           </div>
         </div>
 
-        <div class="infobox text-infobox infobox-half" title="What could we do with 5% of this money?">
-          <h2 class="title what-could-we-do">Что мы могли бы сделать с 5% этих денег?</h2>
-        </div>
-
-        <div class="infobox infobox-quarter flex" title="Provide $1,200 to every American household.">
-          <div class="piechart five-percent">
+        <div class="infobox infobox-quarter flex">
+          <div class="piechart two-point-five-percent">
             <svg class="piechart-outer" viewBox="0 0 32 32">
               <circle class="piechart-inner" r="16" cx="16" cy="16" />
             </svg>
-            <span class="label">5.1%</span>
+            <span class="label">2.5%</span>
             <div class="dotted-line"></div>
             <div class="description">
-              <h2>Выдать по 1200 долларов каждому американскому домохозяйству.</h2>
+              <h2>Полностью оплатить все просроченные долги граждан Америки за медицину.</h2>
             </div>
           </div>
         </div>
 
-        <div class="infobox text-infobox infobox-close" title="The recent coronavirus stimulus was the largest ever passed by congress. It was financed entirely through deficit spending, which will be repaid by taxpayers for generations. The burden of repaying this debt could be erased in an instant with a tax on the super rich so small that they would not even feel it.">
+        <div class="infobox text-infobox infobox-close">
           <div class="title">
-            <p>Недавнее "коронавирусное" стимулирование экономики [<a href="https://en.wikipedia.org/wiki/Coronavirus_Aid,_Relief,_and_Economic_Security_Act" target="_blank">Coronavirus Aid, Relief, and Economic Security Act</a>, <em>прим. пер.</em>] было самым большим из когда-либо ратифицированных Конгрессом. Деньги на это взяли из государственного долга, который будет выплачиваться налогоплательщиками в течение поколений. Небольшой налог на сверхбогатых, который они бы даже не заметили, смог бы снять это бремя с плеч остальных налогоплательщиков.</p>
+            <p>У американцев примерно <a href="https://www.pbs.org/newshour/health/millennials-rack-up-the-most-medical-debt-and-more-frequently" target="_blank">81 миллиард</a> в просроченном долге (в контексте кредитной истории). В общем, это небольшие долги с медианой в <a href="https://files.consumerfinance.gov/f/201412_cfpb_reports_consumer-credit-medical-and-non-medical-collections.pdf" target="_blank">207 долларов</a> на человека.</p>
+            <p>Эти долги снижают кредитный рейтинг более 50 миллионов американцев и резко снижают (в долгосрочной перспективе) шансы получить кредит, ипотеку или устроиться на работу [в США при устройстве на работу могут проверить кредитную историю, это нормальная для них практика. <em>прим. пер</em></em>]. Чтобы выплатить все эти долги потребуется 2.5% богатства 400 богатейших американцев.</p>
           </div>
         </div>
 
-        <div class="infobox text-infobox infobox-close" title="The wealth of 400 Americans could have financed the entire CARES act, including the corporate bailouts, expanded unemployment, and expanded testing&#8212;with nearly a trillion dollars left over.">
+        <div class="infobox text-infobox infobox-close">
           <div class="title">
-            <p>Состояние 400 американцов могло бы быть использовано для полного финансирования этого стимулирования, включая помощь корпорациям, выплаты безработным (фрилансеры впервые получили право на подобные выплаты) и расширенное тестирование. У них останется ещё 1 трлн долларов после этого.</p>
+            Ситуация, на самом деле, даже лучше. Просроченные долги продают на рынке за <a href="https://www.ksl.com/article/46455844/charity-buys-and-erases-past-due-medical-debt" target="_blank">1% от его суммы</a>. То есть для решения проблемы потребуется 810 миллионов долларов. В 2020м году состояние 400 богатейших граждан Америки увеличивалось на эту сумму каждые 29 часов.
           </div>
         </div>
 
-        <div class="infobox infobox-close cares">
-          <div class="chart">
-            <img src="img/cares.svg">
+        <div class="infobox text-infobox infobox-close">
+          <div class="chart medical-chart">
+            <img src="img/medical.svg" />
           </div>
         </div>
 
-        <div class="infobox text-infobox infobox-close" title="Instead, the American tax payer will be stuck with the bill.">
+        <div class="infobox text-infobox infobox-close">
           <div class="title">
-            <p>Вместо этого счёт будет предъявлен обычным налогоплательщикам.</p>
+            Учтите, что мы обсуждали только <em>просроченные долги</em>, не все долги. Полная сумма долгов по медицинским счетам в США неизвестна, но скорее всего в районе <a href="https://github.com/MKorostoff/1-pixel-wealth/blob/master/docs/VALUE_OF_MEDICAL_DEBT.md" target="_blank">300 миллиардов долларов</a>, или 9% богатства 400 американцев.
           </div>
         </div>
 
-        <div class="infobox infobox-quarter flex" title="Lift every American out of poverty.">
-          <div class="piechart five-percent">
+        <div class="infobox infobox-quarter flex">
+          <div class="piechart five-percent five-point-three-percent">
             <svg class="piechart-outer" viewBox="0 0 32 32">
               <circle class="piechart-inner" r="16" cx="16" cy="16" />
             </svg>
-            <span class="label">5.7%</span>
+            <span class="label">5.3%</span>
             <div class="dotted-line"></div>
             <div class="description">
               <h2>Вывести всех американцев из-за черты бедности.</h2>
@@ -472,20 +478,20 @@
           </div>
         </div>
 
-        <div class="infobox text-infobox infobox-close" title="As of 2019, around 38 million Americans lived in poverty. If Americans in poverty were a state, they would be second largest by population. There are more Americans living in poverty than the entire population of Canada. There are likely millions more newly impoverished as a result of coronavirus, but those numbers are not fully known yet.">
+        <div class="infobox text-infobox infobox-close">
           <div class="title">
-            По состоянию на 2019 год, около 38 млн америкацев живут за чертой бедности [<a href="https://en.wikipedia.org/w/index.php?title=Poverty_threshold&oldid=953344222#United_States" target="_blank">это менее 11770 долларов в год на одинокого взрослого или менее 24250 долларов в год на семью из четырёх человек</a>, <em>прим. пер.</em>]. Штат "Американцы, живущие за чертой бедности" был бы вторым по численности населения и превзошёл бы Канаду. Скорее всего, в результате коронавируса, миллионы людей обеднеют. Мы ещё не знаем сколько.
+            По состоянию на 2021 год, около 38 млн америкацев живут за чертой бедности [<a href="https://en.wikipedia.org/w/index.php?title=Poverty_threshold&oldid=953344222#United_States" target="_blank">это менее 11770 долларов в год на одинокого взрослого или менее 24250 долларов в год на семью из четырёх человек</a>, <em>прим. пер.</em>]. Штат "Американцы, живущие за чертой бедности" был бы вторым по численности населения и превзошёл бы Канаду.
           </div>
         </div>
 
-        <div class="infobox infobox-close" title="Population of US States compared to poverty, 2019">
+        <div class="infobox infobox-close">
           <div class="chart">
-            <h3>Население штатов США в сравнении с "Американцами, живущие за чертой бедности", 2019</h3>
+            <h3>Население штатов США в сравнении с "Американцами, живущие за чертой бедности", 2021</h3>
             <img src="img/poverty.svg">
           </div>
         </div>
 
-        <div class="infobox text-infobox infobox-close" title="Every single person in America could be lifted above the poverty line with a one-time cash subsidy of around $10,000 per impoverished family (and about $7,000 for impoverished individuals). The total cost would be $170 billion, a little over 5% of the wealth currently controlled by 400 individuals.">
+        <div class="infobox text-infobox infobox-close">
           <div class="title">
             <p><a href="https://www.census.gov/content/dam/Census/library/publications/2019/demo/p60-266.pdf" target="_blank">Всех нуждающихся</a> в США можно было бы вывести из-за черты бедности с помощью разовой субсидии порядка десяти тысяч долларов на семью (и порядка семи тысяч на одиноких нуждающихся). В сумме - 170 млрд долларов, чуть больше 5% богатства, контролируемого 400 людьми.</p>
           </div>
@@ -493,65 +499,38 @@
 
         <div class="infobox text-infobox infobox-close">
           <div class="title">
-            <p title="It may seem counter intuitive that a one-time subsidy could have any lasting impact on chronic poverty. But one of the surprising truths about poverty is that it's fluid. Americans move in and out of poverty many times throughout their lives, and one good year can have a massive and long lasting effect.">Многие снова могут сказать, что разовая субсидия не имеет длительного влияния на хроническую бедность. Однако, бедность - пластична. Американцы пересекают черту бедности в обоих направлениях много раз за свою жизнь. Один хороший год может иметь серьёзные и долговременные последствия.</p>
+            <p>Многие снова могут сказать, что разовая субсидия не имеет длительного влияния на хроническую бедность. Однако, бедность - пластична. Американцы пересекают черту бедности в обоих направлениях много раз за свою жизнь. Один хороший год может иметь серьёзные и долговременные последствия.</p>
 
-            <p title="A wealth of data now supports the idea that one-time cash transfers can permanently transform a local economy. Given a sudden windfall, people invest in their future. They go back to school, obtain transportation, pay for childcare, pay down debilitating debts, and do any number of things to improve their career prospects and financial future.">Существует множество исследований, показывающих, что <a href="https://www.givedirectly.org/research-on-cash-transfers/" target="_blank">разовые выплаты могут навсегда изменить экономику.</a> Люди вкладывают неожиданные деньги в своё будущее. Они возвращаются в школу, покупают машину [в США это очень важно, без машины там жить нельзя, <em>прим. пер.</em>], платят за детские сады, выплачивают накопившиеся долги и предпринимают другие меры, чтобы улучшить свои карьерные перспективы и будущее.</p>
+            <p>Существует множество исследований, показывающих, что <a href="https://www.givedirectly.org/research-on-cash-transfers/" target="_blank">разовые выплаты могут навсегда изменить экономику.</a> Люди вкладывают неожиданные деньги в своё будущее. Они возвращаются в школу, покупают машину [в США это очень важно, без машины там жить нельзя, <em>прим. пер.</em>], платят за детские сады, выплачивают накопившиеся долги и предпринимают другие меры, чтобы улучшить свои карьерные перспективы и будущее.</p>
           </div>
         </div>
 
-        <div class="infobox text-infobox infobox-close" title="In the US, for all of the people that escape poverty in any given year, about half stay out of poverty for at least five years afterwards. About a third are still out of poverty ten years later.">
+        <div class="infobox text-infobox infobox-close">
           <div class="title">
             <p>В США <a href="https://poverty.ucdavis.edu/sites/main/files/file-attachments/stevens_1994aerpp.pdf" target="_blank">примерно половина людей, вышедших из-за черты бедности</a>, не опускаются за неё в течение пяти лет минимум. Треть не опускаются и спустя десять лет.</p>
           </div>
         </div>
 
-        <div class="infobox text-infobox infobox-close" title="This would not be a permanent fix for all Americans. Surely, some would quickly return to poverty, and others face debts so large that the subsidy would make little difference. But for tens of millions of Americans, this would be a life changing event. It would be a generation defining social program that reshapes our economy for decades to come.">
+        <div class="infobox text-infobox infobox-close">
           <div class="title">
             <p>Разумеется, это не окончательное решение проблемы бедности в США. Некоторые быстро станут бедными, у кого-то настолько большие долги, что подобная субсидия - что слону дробинка. Но для десятков миллионов американцев она может перевернуть жизнь. Она может стать значимой социальной программой, которая определит состояние нашей экономики на последующие десятилетия.</p>
           </div>
        </div>
 
-       <div class="infobox text-infobox infobox-half" title="What could we do with 6% of this money?">
-         <h2 class="title what-could-we-do">Что мы можем сделать с 6% этих денег?</h2>
-       </div>
-
-       <div class="infobox infobox-quarter flex">
-         <div class="piechart six-percent tiny">
-           <svg class="piechart-outer" viewBox="0 0 32 32">
-             <circle class="piechart-inner" r="16" cx="16" cy="16" />
-           </svg>
-           <span class="label">6%</span>
-           <div class="dotted-line"></div>
-           <div class="description" title="Refund 2018 taxes for all households earning under $80,000">
-             <h2>Вернуть налоги за 2018й год всем домохозяйствам с доходом ниже 80 тысяч долларов.</h2>
-           </div>
-         </div>
-       </div>
-
-       <div class="infobox text-infobox infobox-close" title="In 2018, the combined federal tax revenue among all US households earning under $80,000 per year was around $200 billion. This money&#8212;taken entirely from poor and middle class Americans&#8212;could be returned for a tiny fraction of the wealth controlled by the .0001%.">
-         <div class="title">
-           <p>В 2018 году, доход государства от налогов с домохозяств с доходом ниже 80 тысяч долларов в год <a href="https://taxfoundation.org/summary-latest-federal-income-tax-data-2018-update/" target="_blank">составил порядка 200 млрд долларов.</a> Эти деньги &#8212; взятые с низшего и среднего класса американцев &#8212; могли бы быть возвращены им из малой доли богатства, контролируемого 0.0001%.</p>
-         </div>
-       </div>
-
-        <div class="infobox text-infobox infobox-half" title="What could we do with 8% of this money?">
-          <h2 class="title what-could-we-do">Что мы можем сделать с 8% этих денег?</h2>
-        </div>
-
         <div class="infobox infobox-quarter flex">
-          <div class="piechart eight-percent tiny">
+          <div class="piechart seven-point-five-percent tiny">
             <svg class="piechart-outer" viewBox="0 0 32 32">
               <circle class="piechart-inner" r="16" cx="16" cy="16" />
             </svg>
-            <span class="label">8%</span>
+            <span class="label">7.5%</span>
             <div class="dotted-line"></div>
-            <div class="description" title="Provide clean drinking water and toilet access to every human on earth.">
+            <div class="description">
               <h2>Обеспечить каждого человека на планете чистой водой и туалетом.</h2>
             </div>
           </div>
         </div>
 
-        <div class="infobox text-infobox infobox-close" title="Around 844 million people have no access to clean water of any kind. About the same number have no access to a toilet or latrine of any kind, and therefore defecate in the open.">
+        <div class="infobox text-infobox infobox-close">
           <div class="title">
             <p>Примерно <a href="https://www.who.int/news-room/detail/12-07-2017-2-1-billion-people-lack-safe-drinking-water-at-home-more-than-twice-as-many-lack-safe-sanitation" target="_blank">844 миллиона людей</a> не имеют доступа к чистой воде. Примерно столько же не имеют доступа к канализации, следовательно, испражняются на улице.</p>
           </div>
@@ -560,40 +539,55 @@
         <div class="infobox text-infobox infobox-close">
           <div class="worldchart">
             <img src="img/no_clean_water.png"/>
-            <h2 class="description" title="No clean water">Нет чистой воды</h2>
+            <h2 class="description">Нет чистой воды</h2>
           </div>
         </div>
 
-        <div class="infobox text-infobox infobox-close" title="Contaminated water is a major source of disease, including cholera, dysentery, and typhoid. It is estimated that contaminated water kills about 829,000 people every year, making it one of the world's biggest killers. The cost to provide clean water and waste disposal for everyone on earth would be about $240 billion, or 8% of the wealth controlled by the 400 richest Americans.">
+        <div class="infobox text-infobox infobox-close">
           <div class="title">
-            <p>Грязная вода - основной источник болезней, в том числе холеры, дизентерии и брюшного тифа. <a href="https://www.who.int/news-room/fact-sheets/detail/drinking-water"  target="_blank">По данным ВОЗ,</a> от грязной воды погибает примерно 829000 человек ежегодно. Стоимость чистой воды и канализации для каждого на планете <a href="https://www.who.int/water_sanitation_health/watandmacr3.pdf" target="_blank">240 млрд долларов</a> или 8% средств, контролируемых 400 богатейшими американцами.</p>
+            <p>Грязная вода - основной источник болезней, в том числе холеры, дизентерии и брюшного тифа. <a href="https://www.who.int/news-room/fact-sheets/detail/drinking-water"  target="_blank">По данным ВОЗ,</a> от грязной воды погибает примерно 829000 человек ежегодно. Стоимость чистой воды и канализации для каждого на планете <a href="https://web.archive.org/web/20220221195720/https://www.who.int/water_sanitation_health/watandmacr3.pdf" target="_blank">240 млрд долларов</a> или 7.5% средств, контролируемых 400 богатейшими американцами.</p>
           </div>
         </div>
 
-        <div class="infobox text-infobox infobox-close" title="OK, now that we've established the scale of inequality in the United States, let's dare to dream a little bigger.">
+        <div class="infobox text-infobox infobox-close">
           <div class="title">
             ОК, мы определили и поняли машстабы неравенства в США. Давайте дерзнём и помечтаем побольше.
           </div>
         </div>
 
-        <div class="infobox text-infobox infobox-close" title="What could we do with 40% of this money?">
-          <h2 class="title what-could-we-do">Что мы можем сделать с 40% этих денег?</h2>
+        <div class="infobox text-infobox infobox-close">
+          <h2 class="title what-could-we-do">Что мы можем сделать с меньше, чем 40% этих денег?</h2>
         </div>
+
 
         <div class="infobox infobox-quarter flex">
           <div class="piechart forty-percent tiny">
             <svg class="piechart-outer" viewBox="0 0 32 32">
               <circle class="piechart-inner" r="16" cx="16" cy="16" />
             </svg>
-            <span class="label">43%</span>
+            <span class="label">39.6%</span>
             <div class="dotted-line"></div>
-            <div class="description" title="Give $10,000 to every American household">
-              <h2>Раздать по 10 тысяч долларов каждому домохозяйству.</h2>
+            <div class="description">
+              <h2>Предоставить оплачиваемый отпуск по уходу за ребёнку каждому Американцу в течение следующих 100 лет</h2>
             </div>
           </div>
         </div>
 
-        <div class="infobox text-infobox infobox-close" title="There are about 128 million households in the United States. To give each one $10,000 would cost $1.28 trillion, or about 43% of the wealth controlled by 400 Americans.">
+        <div class="infobox text-infobox infobox-close">
+          <div class="title">
+            <p>Оплачиваемые отпуска по уходу за ребёнком оцениваются в <a href="https://www.americanactionforum.org/insight/the-fiscal-cost-of-a-paid-parental-leave-program-by-state/" target="_blank">12 миллиардов долларов</a> в год. Это 0.39% богатства 400 американцев. Или 5% богатства, накопленных ими за один только 2020й год.</p>
+            <p>Если они будут оплачивать эти отпуска следующие 100 лет, получится примерно 39% их богатства.</p>
+          </div>
+        </div>
+
+        <div class="infobox text-infobox infobox-close">
+          <div class="title">
+            <p>Эту программу сложнее оценить, чем остальные, которые предлагались на этой странице, потому что расходы будут постоянными, а не разовыми и стоимость будет сильно зависеть от предоставляемых льгот. Однако, <a href="https://web.archive.org/web/20210809092211/https://www.manning-napier.com/insights/blogs/insights-for-non-profits/endowments-and-foundations-a-closer-look-at-spending-rules" target="_blank">используя схему выплат 5%</a> супербогатые могут оплачивать себе <u>пожизненный отпуск</u> в 12 раз щедрее, чем описывается здесь и всё ещё продолжать богатеть, даже учитывая инфляцию.</p>
+          </div>
+        </div>
+
+
+        <div class="infobox text-infobox infobox-close">
           <div class="title">
             В США примерно 128 миллионов домохозяйств. Если раздать каждому по 10 тысяч, мы потратим 1.28 трлн долларов, т.е. около 43% богатства тех самых 400 американцев.
           </div>
@@ -601,50 +595,61 @@
 
         <div class="infobox text-infobox infobox-close">
           <div class="title">
-            <p title="As Americans debate how and when to open the economy after coronavirus, we are frequently presented with a seemingly impossible choice between risking millions of lives and sliding into a great depression through a continued lock down. This is a repugnant lie.">Когда американцы жарко спорят о том как и в какие сроки следует запустить экономику после коронавируса, их часто ставят перед неразрешимой дилеммой: рискнуть миллионами жизней или сползти в ещё больший экономический кризис. Это бессовестное враньё.</p>
-            <p title="The money to weather this storm while maintaining quarantine exists, it's just a matter of finding the political will to take it.">Деньги на то, чтобы пережить этот шторм, есть. Чтобы взять их, необходима политическая воля.</p>
+            <p>Когда коронавирус бушевал в США в 2020, рабочих людей часто ставили перед выбором между смертью из-за преждевренного открытия или экономической депрессией из-за карантина. В этой ложной дихотомии было одно невысказанное предположение: Американцы не могут оплачивать необходимые расходы, кроме как рабочая или получая субсидии от государства, у которого кончались деньги. Хм. Ведь больше неоткуда взять денег, так?</p>
           </div>
         </div>
 
-        <div class="infobox text-infobox infobox-close" title="What could we do with 85% of this money?">
-          <h2 class="title what-could-we-do">Что мы можем сделать с 85% этих денег?</h2>
+        <div class="infobox text-infobox infobox-close">
+          <h2 class="title what-could-we-do">Что мы можем сделать с 60% этих денег?</h2>
         </div>
 
         <div class="ninety-wrapper-outer infobox infobox-close">
           <div class="ninety-wrapper center-sticky">
             <div class="ninety">
-              <img src="img/ninety.svg" />
+              <img src="img/sixty_percent.svg" />
             </div>
           </div>
         </div>
 
-        <div class="infobox text-infobox infobox-close" title="These programs combined would completely transform our world. By redistributing this wealth, millions of lives would be saved. Billions would be rescued from poverty and disease. By inconveniencing <em>just 400 people</em>, the entire human race could advance to a new, unprecedented level of development.">
+        <div class="infobox text-infobox infobox-close">
           <div class="title">
             Если эти программы претворить в жизнь, мир никогда не станет прежним. Перераспределив богатство, мы спасём миллионы жизней. Миллиарды смогут избежать бедности и болезней. Причинив неудобства <em>всего лишь 400 людям</em>, всё человечество может шагнуть на новый, невиданный ранее уровень развития.
           </div>
         </div>
 
-        <div class="infobox text-infobox infobox-close all-of-them" title="And all of them would still be billionaires afterwards.">
+        <div class="infobox text-infobox infobox-close all-of-them">
           <div class="title">
             И <em>все</em> они всё ещё останутся миллиардерами.
           </div>
         </div>
 
-        <div class="infobox text-infobox infobox-close" title="Is it really so radical to suggest that this is the right thing to do? Given the choice between millions of deaths, and slightly shrinking the fortunes of a few super rich people, how could anyone conclude that the death of millions is preferable?">
+        <div class="infobox text-infobox infobox-close">
           <div class="title">
             Неужели это настолько непонятно, как именно надо поступить? Как кто-либо, находясь перед выбором между миллионами смертей и небольшим уменьшением состояний нескольких супер-богатых людей, может выбрать миллионы смертей?
           </div>
         </div>
 
-        <div class="infobox text-infobox infobox-half" title="We cannot accept this level of inequality any longer.">
+        <div class="infobox text-infobox infobox-half">
           <h2 class="title what-could-we-do">Нельзя больше терпеть это неравенство.</h2>
         </div>
 
       </div>
     </div>
   </div>
+  <div class="footer">
+    <div>Updated April 3, 2021. <a target="_blank" href="https://github.com/MKorostoff/1-pixel-wealth/blob/master/README.md">About this page</a></div>
+    <div>Перевод обновлён 29.01.2025 г.</div>
+    <div class="also">Also checkout: <a href="https://mkorostoff.github.io/incarceration-in-real-numbers/" target="_blank">Incarceration in Real Numbers</a></div>
+  </div>
 
 </div>
-<script type="text/javascript" src="main.js?version=1.0"></script>
+<script type="text/javascript" src="main.js?version=1.9"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-2320532-12"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-2320532-12');
+</script>
 </body>
 </html>
